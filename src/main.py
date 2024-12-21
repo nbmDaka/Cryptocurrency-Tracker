@@ -1,12 +1,6 @@
 from fastapi import FastAPI
+from src.router import router as router_crypto
 
-api = FastAPI()
+app = FastAPI()
 
-@api.get("/cryptocurrencies")
-async def get_cryptocurrencies():
-    ...
-
-
-@api.get("/cryptocurrency/{currency_id}")
-async def get_cryptocurrency(currency_id: int):
-    ...
+app.include_router(router_crypto)
