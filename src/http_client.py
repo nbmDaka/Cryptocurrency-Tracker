@@ -26,3 +26,6 @@ class CMCHTTPClient(HTTPClient):
         ) as resp:
             result = await resp.json()
             return result["data"]
+
+# uvicorn src.main:app --host 192.168.56.1 --port 8000
+# starting command
